@@ -113,7 +113,7 @@
  </distributionManagement>
  
  <build>
-  <finalName>dev-init-app-v1</finalName>
+  <finalName>init-app-v1</finalName>
   
   <plugins>
    <plugin>
