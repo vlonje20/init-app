@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     </head>
+
 <body>
 
     <!-- Navbar (sit on top) -->
@@ -26,8 +27,7 @@
     <header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
         <img class="w3-image" src="https://dev-init-app.s3.amazonaws.com/header-footer/header.jpg" alt="Explore" width="1500" height="800">
         <div class="w3-display-middle w3-margin-top w3-center">
-            <h1 class="w3-xxlarge w3-text-white"><span class="w3-padding w3-red w3-opacity-min"><b>.iNit</b></span> <span
-                    class="w3-hide-small w3-text-light-grey"><b>|  Technologies</b></span></h1>
+            <h1 class="w3-xxlarge w3-text-white"><span class="w3-padding w3-red w3-opacity-min"><b>.iNit</b></span> <span class="w3-hide-small w3-text-light-grey"><b>|  Technologies</b></span></h1>
         </div>
     </header>
 
@@ -40,64 +40,70 @@
         </div>
 
         <div class="w3-row-padding">
+
             <div class="w3-col l3 m6 w3-margin-bottom">
                 <div class="w3-display-container">
                     <div class="w3-display-bottomleft w3-black w3-padding">Mr. Dramacydal</div>
                     <img src="https://dev-init-app.s3.amazonaws.com/home/mr+dramacydal.jpeg" alt="Vin" style="width:100%">
                 </div>
             </div>
+
             <div class="w3-col l3 m6 w3-margin-bottom">
                 <div class="w3-display-container">
                     <div class="w3-display-bottomleft w3-black w3-padding">N. Allen</div>
                     <img src="https://dev-init-app.s3.amazonaws.com/home/allen.JPEG" alt="Allen" style="width:100%">
                 </div>
             </div>
+
             <div class="w3-col l3 m6 w3-margin-bottom">
                 <div class="w3-display-container">
                     <div class="w3-display-bottomleft w3-black w3-padding">Y. Giles</div>
                     <img src="https://dev-init-app.s3.amazonaws.com/home/giles1.jpg" alt="Giles" style="width:100%">
                 </div>
             </div>
+
             <div class="w3-col l3 m6 w3-margin-bottom">
                 <div class="w3-display-container">
                     <div class="w3-display-bottomleft w3-black w3-padding">T. Vanisa</div>
                     <img src="https://dev-init-app.s3.amazonaws.com/home/va.jpg" alt="Vanisa" style="width:100%">
                 </div>
             </div>
-        </div>
 
-        <div class="w3-row-padding">
             <div class="w3-col l3 m6 w3-margin-bottom">
                 <div class="w3-display-container">
                     <div class="w3-display-bottomleft w3-black w3-padding">Von Max</div>
                     <img src="https://dev-init-app.s3.amazonaws.com/home/max1.jpg" alt="Builder" style="width:99%">
                 </div>
             </div>
+
             <div class="w3-col l3 m6 w3-margin-bottom">
                 <div class="w3-display-container">
                     <div class="w3-display-bottomleft w3-black w3-padding">Y. Flora</div>
                     <img src="https://dev-init-app.s3.amazonaws.com/home/flora-home.jpg" alt="Flora" style="width:99%">
                 </div>
             </div>
+
             <div class="w3-col l3 m6 w3-margin-bottom">
                 <div class="w3-display-container">
                     <div class="w3-display-bottomleft w3-black w3-padding">Daily Standup</div>
                     <img src="https://dev-init-app.s3.amazonaws.com/home/pp-session.jpg" alt="Project" style="width:99%">
                 </div>
             </div>
+
             <div class="w3-col l3 m6 w3-margin-bottom">
                 <div class="w3-display-container">
                     <div class="w3-display-bottomleft w3-black w3-padding">Sprint Meetings</div>
                     <img src="https://dev-init-app.s3.amazonaws.com/home/pp-session1.jpg" alt="Project" style="width:99%">
                 </div>
             </div>
+
         </div>
         
-
         <!-- About Section -->
         <div class="w3-container w3-padding-32" id="About">
             <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16"><b>About Us</b></h3>
         </div>
+
         <div class="careers container" id="careers">
         <h2 class="w3-center"></h2>
         <div class="cards w3-padding-large w3-margin-top">
@@ -130,14 +136,14 @@
                     </p>
                   </ul>                  
                 </div>
-              </div>
+            </div>
               <footer class="w3-container" style="padding: 0">
                 <a class="w3-button w3-indigo w3-hover-blue" style="width: 100%;" href="#contact">A little sleep, a little slumber, a little folding of the hands to rest and poverty will come on you like a thief and scarcity like an armed man.</a>
               </footer>
-            </div>
-
+        </div>
+        </div>
      
-           <!-- Team Section -->
+        <!-- Team Section -->
         <div class="w3-container w3-padding-32" id="Team">
             <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16"><b>The Team</b></h3>
             <p>I want to take a moment to express my utmost admiration and respect for each and every one of you. 
@@ -151,8 +157,7 @@
             <p>Looking ahead, I have no doubt that our team will continue to create groundbreaking solutions, overcome challenges, and inspire others 
               with our unwavering dedication. Let this accomplishment fuel our ambition, reminding us that together, we can conquer anything we set our minds to.
               I am honored to be a part of this incredible team, and I am excited to witness the great things we will achieve collectively in the future. 
-              Congratulations on a job excellently done!
-              
+              Congratulations on a job excellently done!              
             </p>
 
             <p> - Vin - Project Cordinator. </p>
@@ -163,8 +168,7 @@
                 <img src="https://dev-init-app.s3.amazonaws.com/teams/vin-team.jpg" alt="Vin" style="width:100%">
                 <h3>Vin Lonje</h3>
                 <p class="w3-opacity">Sr. Kubernetes Administrator</p>
-                <p>Strong troubleshooting skills, with the ability to diagnose and resolve issues, this account for a significant portion of his responsibilities.
-                </p>
+                <p>Strong troubleshooting skills, with the ability to diagnose and resolve issues, this account for a significant portion of his responsibilities.</p>
                 <p><button class="w3-button w3-light-grey w3-block">Contact</button></p>
             </div>
 
@@ -206,9 +210,8 @@
                 <p class="w3-opacity">Sr. DevOps Engineer</p>
                 <p>With her Automation Mindset, she is Focus on automating manual tasks to improve efficiency and consistency.</p>
                 <p><button class="w3-button w3-light-grey w3-block">Contact</button></p>
-            </div>            
+            </div>                        
         </div>
-
 
         <!-- Contact Section -->
         <div class="w3-container w3-padding-32" id="contact">
@@ -229,10 +232,9 @@
         <div class="w3-container">
             <img src="https://dev-init-app.s3.amazonaws.com/header-footer/footer1.jpg" class="w3-image" style="width:100%">
         </div>
-
-        <!-- End page content -->
+    
     </div>
-
+    <!-- End page content -->
 
     <!-- Footer. This section contains an ad for W3Schools Spaces. You can leave it to support us. -->
     <footer class="w3-center w3-black w3-padding-16">
