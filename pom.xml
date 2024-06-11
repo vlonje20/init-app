@@ -99,15 +99,15 @@
  
  <distributionManagement>
      <repository>
-       <id>nexus</id>
-       <name>your-release-repo-name</name>
-       <url>nexus-release-url</url>
+       <id>init-app-release</id>
+       <name>init-app-release</name>
+       <url>http://localhost:8081/repository/init-app-release/</url>
      </repository>
      
      <snapshotRepository>
-       <id>nexus</id>
-       <name>your-snapshot-repo-name</name>
-       <url>nexus=snapshot-url</url>
+       <id>init-app-snapshot</id>
+       <name>init-app-snapshot</name>
+       <url>http://localhost:8081/repository/init-app-snapshot/</url>
      </snapshotRepository>
      
  </distributionManagement>
