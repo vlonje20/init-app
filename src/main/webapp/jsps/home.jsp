@@ -227,7 +227,7 @@
 
     <!-- Footer. This section contains an ad for W3Schools Spaces. You can leave it to support us. -->
     <footer class="w3-center w3-black w3-padding-16">
-        <p class="w3-small">© Copyright vintech 2024. Designed by vinTech Inc.</p>
+        <p class="w3-small"> © Copyright vintech 2021 - 2024. Designed by vinTech Inc.</p>
         <a class="w3-button w3-round-xxlarge w3-small w3-white w3-margin-bottom" href="https://www.w3schools.com/spaces" target="_blank">Thanks!!!</a>
     <!-- Footer end. -->
     </footer>
