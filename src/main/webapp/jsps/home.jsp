@@ -87,8 +87,8 @@
             </div>
             <div class="w3-col l3 m6 w3-margin-bottom">
                 <div class="w3-display-container">
-                    <div class="w3-display-bottomleft w3-padding" style="background-color: rgba(0, 0, 0, 0.5); color: white;"><b>Project Planning</b></div>
-                    <img src="https://dev-init-app.s3.amazonaws.com/home/pp-session.jpg" alt="House" style="width:99%">
+                    <div class="w3-display-bottomleft w3-padding" style="background-color: rgba(0, 0, 0, 0.5); color: white;"><b>At the Dev Stage</b></div>
+                    <img src="https://dev-init-app.s3.amazonaws.com/home/vin-dev.jpg" alt="House" style="width:99%">
                 </div>
             </div>
         </div>
@@ -215,7 +215,7 @@
                 </button>
             </form>
         </div>
-
+         
         <!-- Image of location/map -->
         <div class="w3-container">
             <img src="https://dev-init-app.s3.amazonaws.com/header-footer/footer1.jpg" class="w3-image" style="width:100%">

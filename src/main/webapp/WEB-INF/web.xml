@@ -21,3 +21,21 @@
     <welcome-file>/jsps/home.jsp</welcome-file>
   </welcome-file-list>
 </web-app>
+
+
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+                             http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+
+    <servlet>
+        <servlet-name>SendEmailServlet</servlet-name>
+        <servlet-class>com.yourpackage.SendEmailServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>SendEmailServlet</servlet-name>
+        <url-pattern>/sendEmail</url-pattern>
+    </servlet-mapping>
+</web-app>
