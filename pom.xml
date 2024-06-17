@@ -23,11 +23,11 @@
   <junit.version>4.11</junit.version>
   <log4j.version>1.2.17</log4j.version>
   <sonar.host.url>http://localhost:9000/</sonar.host.url>
-  <sonar.login>vin</sonar.login>
+  <sonar.login>vlonje20</sonar.login>
   <sonar.password>drama20</sonar.password>
   <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-  <sonar.projectKey>squ_475d48f98c47444a45018622062c7cee8561e0ab</sonar.projectKey>
+  <sonar.projectKey>squ_b5599386184a4ed95255da444bbd4466d04f64d6</sonar.projectKey>
   <sonar.projectName>vin-init-app</sonar.projectName>
         
  </properties>
