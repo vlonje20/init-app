@@ -2,51 +2,73 @@ pipeline {
     agent any
 
     environment {
-        DOCKERHUB_CREDENTIALS = credentials('dockerhub-credentials') // Jenkins credentials ID
-        DOCKERHUB_REPO = 'vlonje20/vin-init-app'
-        IMAGE_TAG = 'latest'
+        // Define environment variables
+        NEXUS_VERSION = '1.0.0'
+        NEXUS_REPOSITORY = 'vin-init-app-snapshot'
+        NEXUS_URL = 'http://localhost:8081/repository/vin-init-app-snapshot//${NEXUS_REPOSITORY}'
+        SONAR_PROJECT_KEY = 'squ_b5599386184a4ed95255da444bbd4466d04f64d6'
+        TOMCAT_URL = 'http://http://localhost:8082/vin-init-app'
+        TOMCAT_CREDENTIALS_ID = 'jenkins_tom_cred'
     }
 
     stages {
         stage('Checkout') {
             steps {
-                // Checkout code from version control
-                git 'https://github.com/vlonje20/init-app.git'
+                // Get the latest code from the source control
+                checkout scm
             }
         }
 
-        stage('Build Docker Image') {
+        stage('Build with Maven') {
             steps {
-                script {
-                    docker.build("${DOCKERHUB_REPO}:${IMAGE_TAG}")
-                }
+                // Run Maven build
+                sh 'mvn clean package'
             }
         }
 
-        stage('Push to Docker Hub') {
+        stage('SonarQube Analysis') {
             steps {
+                // Run SonarQube analysis
                 script {
-                    docker.withRegistry('https://index.docker.io/v1/', 'DOCKERHUB_CREDENTIALS') {
-                        docker.image("${DOCKERHUB_REPO}:${IMAGE_TAG}").push()
+                    def scannerHome = tool 'SonarQube Scanner';
+                    withSonarQubeEnv('SonarQube') {
+                        sh "${scannerHome}/bin/sonar-scanner -Dsonar.projectKey=${SONAR_PROJECT_KEY}"
                     }
                 }
             }
         }
 
-        stage('Pull Docker Image') {
+        stage('Archive to Nexus') {
             steps {
+                // Upload artifact to Nexus
                 script {
-                    sh "docker pull ${DOCKERHUB_REPO}:${IMAGE_TAG}"
+                    def artifact = "target/my-app-${env.BUILD_NUMBER}.jar"
+                    sh "curl -u admin:admin123 --upload-file ${artifact} ${NEXUS_URL}/${artifact}"
                 }
             }
         }
 
-        stage('Run Docker Container') {
+        stage('Deploy to Tomcat') {
             steps {
+                // Deploy to Tomcat
                 script {
-                    sh "docker run -d -p 8080:8080 ${DOCKERHUB_REPO}:${IMAGE_TAG}"
+                    def tomcatManagerUrl = "${TOMCAT_URL}/manager/text"
+                    def warFile = "target/my-app-${env.BUILD_NUMBER}.war"
+                    sh """
+                        curl -u \$(credentials('${TOMCAT_CREDENTIALS_ID}')) \
+                        --upload-file ${warFile} "${tomcatManagerUrl}/deploy?path=/myapp&update=true"
+                    """
                 }
             }
+        }
+    }
+
+    post {
+        success {
+            echo 'Build, scan, archive, and deployment completed successfully.'
+        }
+        failure {
+            echo 'The pipeline failed.'
         }
     }
 }
