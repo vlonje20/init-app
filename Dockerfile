@@ -5,10 +5,10 @@ FROM openjdk:11-jre-slim
 WORKDIR /app
 
 # Copy the WAR file to the container
-COPY vin-init-app.war /app/vin-init-app.war
+COPY target/jenkins-docker-init-app.war /app/jenkins-docker-init-app.war
 
 # Expose the port your app runs on
 EXPOSE 8080
 
 # Command to run the WAR file
-ENTRYPOINT ["java", "-jar", "/app/vin-init-app.war"]
+ENTRYPOINT ["java", "-jar", "/app/jenkins-docker-init-app.war"]

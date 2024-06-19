@@ -113,7 +113,7 @@
  </distributionManagement>
  
  <build>
-  <finalName>vin-init-app</finalName>
+  <finalName>jenkins-docker-init-app</finalName>
   
   <plugins>
    <plugin>
