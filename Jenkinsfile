@@ -42,8 +42,8 @@ pipeline {
             steps {
                 // Upload artifact to Nexus
                 script {
-                    def artifact = "target/my-app-${env.BUILD_NUMBER}.jar"
-                    sh "curl -u admin:admin123 --upload-file ${artifact} ${NEXUS_URL}/${artifact}"
+                    def artifact = "target/*.war-${env.BUILD_NUMBER}.war"
+                    sh "curl -u admin:drama20 --upload-file ${artifact} ${NEXUS_URL}/${artifact}"
                 }
             }
         }
@@ -53,7 +53,7 @@ pipeline {
                 // Deploy to Tomcat
                 script {
                     def tomcatManagerUrl = "${TOMCAT_URL}/manager/text"
-                    def warFile = "target/my-app-${env.BUILD_NUMBER}.war"
+                    def warFile = "target/*.war-${env.BUILD_NUMBER}.war"
                     sh """
                         curl -u \$(credentials('${TOMCAT_CREDENTIALS_ID}')) \
                         --upload-file ${warFile} "${tomcatManagerUrl}/deploy?path=/myapp&update=true"
