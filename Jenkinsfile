@@ -1,8 +1,6 @@
 pipeline {
-    agent {
-        label 'docker'
-    }
-
+    agent any
+    
     environment {
         DOCKERHUB_USERNAME = 'vlonje20'
         DOCKERHUB_PASSWORD = 'legion-fibulas-mordacious'
