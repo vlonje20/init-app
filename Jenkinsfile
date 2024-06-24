@@ -1,10 +1,12 @@
 pipeline {
-    agent any
+    agent {
+        label 'docker-agent1'
+    }
     
     environment {
         DOCKERHUB_USERNAME = 'vlonje20'
         DOCKERHUB_PASSWORD = 'legion-fibulas-mordacious'
-        DOCKERHUB_REPO = 'vlonje20/vin-init-app'
+        DOCKERHUB_REPO = 'vlonje20/vin-image'
         IMAGE_TAG = 'latest'
     }
 
