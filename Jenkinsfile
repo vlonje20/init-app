@@ -2,7 +2,7 @@ pipeline {
     agent {
         label 'docker-agent1'
     }
-    
+
     environment {
         DOCKERHUB_USERNAME = 'vlonje20'
         DOCKERHUB_PASSWORD = 'legion-fibulas-mordacious'
@@ -14,7 +14,11 @@ pipeline {
         stage('Checkout') {
             steps {
                 // Checkout code from version control
-                git 'https://github.com/vlonje20/init-app.git'
+                checkout([
+                    $class: 'GitSCM',
+                    branches: [[name: '*/main']],
+                    userRemoteConfigs: [[url: 'https://github.com/vlonje20/init-app.git', credentialsId: 'jenkins_github_cred']]
+                ])
             }
         }
 
@@ -43,7 +47,7 @@ pipeline {
                     docker pull $DOCKERHUB_REPO:$IMAGE_TAG
 
                     # Run the Docker container
-                    docker run -d -p 8280:8080 $DOCKERHUB_REPO:$IMAGE_TAG
+                    docker run -d -p 8080:8080 $DOCKERHUB_REPO:$IMAGE_TAG
                     '''
                 }
             }
