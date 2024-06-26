@@ -17,8 +17,19 @@ pipeline {
                 checkout([
                     $class: 'GitSCM',
                     branches: [[name: '*/main']],
-                    userRemoteConfigs: [[url: 'https://github.com/vlonje20/init-app.git', credentialsId: 'jenkins_github_cred']]
+                    userRemoteConfigs: [[url: 'https://github.com/vlonje20/init-app.git', credentialsId: 'jenkins-github-cred']]
                 ])
+            }
+        }
+
+        stage('Build WAR') {
+            steps {
+                script {
+                    sh '''
+                    # Build the .war file using Maven
+                    mvn clean package
+                    '''
+                }
             }
         }
 
@@ -31,9 +42,6 @@ pipeline {
 
                     # Build the Docker image
                     docker build -t $DOCKERHUB_REPO:$IMAGE_TAG .
-
-                    # Push the Docker image to Docker Hub
-                    docker push $DOCKERHUB_REPO:$IMAGE_TAG
                     '''
                 }
             }
