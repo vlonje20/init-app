@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        label 'docker-agent1'
+        label 'vin-agent1'
     }
 
     environment {
