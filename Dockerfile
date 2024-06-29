@@ -1,14 +1,16 @@
-# Use a base image with Java runtime environment
-FROM openjdk:11-jre-slim
+# Use the official Tomcat 9 image as the base image
+FROM tomcat:9-jdk11-openjdk
 
-# Set the working directory
-WORKDIR /app
+# Remove the default web applications deployed with Tomcat
+RUN rm -rf /usr/local/tomcat/webapps/*
 
-# Copy the WAR file to the container
-COPY target/jenkins-docker-init-app.war /app/jenkins-docker-init-app.war
+# Copy the WAR file into the webapps directory of Tomcat
+# Replace 'your-app.war' with the name of your WAR file
+COPY target/*.war /usr/local/tomcat/webapps/ROOT.war
 
-# Expose the port your app runs on
+
+# Expose port 8080 for the Tomcat server
 EXPOSE 8080
 
-# Command to run the WAR file
-ENTRYPOINT ["java", "-jar", "/app/jenkins-docker-init-app.war"]
+# Start Tomcat server
+CMD ["catalina.sh", "run"]
