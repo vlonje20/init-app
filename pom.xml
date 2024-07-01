@@ -28,7 +28,7 @@
   <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
   <sonar.projectKey>squ_cfd0140dcf356b87b4159e9cf7e5402c77e57ecd</sonar.projectKey>
-  <sonar.projectName>vin-init-app</sonar.projectName>
+  <sonar.projectName>devops-init-app</sonar.projectName>
         
  </properties>
 
