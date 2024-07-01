@@ -23,11 +23,11 @@
   <junit.version>4.11</junit.version>
   <log4j.version>1.2.17</log4j.version>
   <sonar.host.url>http://localhost:9000/</sonar.host.url>
-  <sonar.login>vin-lonje</sonar.login>
+  <sonar.login>dramacydal</sonar.login>
   <sonar.password>drama20</sonar.password>
   <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-  <sonar.projectKey>squ_ab34d2748585ff7b0358a1218271f512aa7b134b</sonar.projectKey>
+  <sonar.projectKey>squ_cfd0140dcf356b87b4159e9cf7e5402c77e57ecd</sonar.projectKey>
   <sonar.projectName>vin-init-app</sonar.projectName>
         
  </properties>
@@ -99,21 +99,21 @@
  
  <distributionManagement>
      <repository>
-       <id>vin-init-app-release</id>
-       <name>vin-init-app-release</name>
-       <url>http://localhost:8081/repository/vin-init-app-release/</url>
+       <id>devops-init-app-release</id>
+       <name>devops-init-app-release</name>
+       <url>http://localhost:8081/repository/devops-init-app-release/</url>
      </repository>
      
      <snapshotRepository>
-       <id>vin-init-app-snapshot</id>
-       <name>vin-init-app-snapshot</name>
-       <url>http://localhost:8081/repository/vin-init-app-snapshot/</url>
+       <id>devops-init-app-snapshot</id>
+       <name>devops-init-app-snapshot</name>
+       <url>http://localhost:8081/repository/devops-init-app-snapshot/</url>
      </snapshotRepository>
      
  </distributionManagement>
  
  <build>
-  <finalName>vin-init-app</finalName>
+  <finalName>devops-init-app</finalName>
   
   <plugins>
    <plugin>
